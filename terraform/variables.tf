@@ -22,6 +22,12 @@ variable "do_region" {
   default     = "nyc3"
 }
 
+variable "kubernetes_version" {
+  description = "Digital Ocean Kubernetes Version (e.g. 1.33.1-do.3)"
+  type        = string
+  default     = "1.33.1-do.3"
+}
+
 variable "do_k8s_name" {
   description = "Digital Ocean Kubernetes cluster name (e.g. `k8s-do`)"
   type        = string
@@ -66,7 +72,7 @@ variable "do_k8s_nodepool_size" {
 
 variable "domain_name" {
   description = "domain to use for argo and atlantis"
-  default     = ["wayofthesys.com"]
+  default     = ["tfvisualizer.com"]
 }
 
 variable "atlantis_github_user" {
